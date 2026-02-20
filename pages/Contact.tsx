@@ -29,13 +29,13 @@ const Contact: React.FC = () => {
 
   return (
     <motion.div 
-      className="w-full bg-white"
+      className="w-full bg-secondary-900"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-       <div className="bg-secondary-900 py-20">
+       <div className="bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 py-20">
         <div className="max-w-7xl mx-auto px-4 text-center text-white">
           <motion.h1 
             initial={{ opacity: 0, y: -20 }}

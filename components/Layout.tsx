@@ -14,7 +14,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, currentPage, onNavigate, userRole, onLogin, onLogout }) => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-secondary-900">
       <Navbar 
         currentPage={currentPage} 
         onNavigate={onNavigate} 

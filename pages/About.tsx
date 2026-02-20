@@ -23,14 +23,14 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
 
   return (
     <motion.div 
-      className="w-full bg-white"
+      className="w-full bg-secondary-900"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       {/* Page Header Banner */}
-      <div className="relative py-32 bg-gray-900 overflow-hidden">
+      <div className="relative py-32 bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 overflow-hidden">
          <motion.img 
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
@@ -39,13 +39,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             className="absolute inset-0 w-full h-full object-cover opacity-30" 
             alt="Background" 
          />
-         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+         <div className="absolute inset-0 bg-gradient-to-t from-primary-600 via-transparent to-transparent opacity-50"></div>
          <div className="relative max-w-7xl mx-auto px-4 text-center">
             <motion.nav 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="flex justify-center mb-4 text-sm font-medium text-gray-400 space-x-2"
+              className="flex justify-center mb-4 text-sm font-medium text-white/70 space-x-2"
             >
                <span>Home</span>
                <span>/</span>
@@ -55,7 +55,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-4xl md:text-5xl font-bold text-white mb-6"
+              className="text-4xl md:text-5xl font-black text-white mb-6"
             >
               About EcoTrade
             </motion.h1>
@@ -63,7 +63,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl text-gray-300 max-w-2xl mx-auto"
+              className="text-xl text-white/90 max-w-2xl mx-auto"
             >
               Organizing the world's recyclables and empowering sustainability through technology.
             </motion.p>
@@ -71,7 +71,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
       </div>
 
       {/* Mission Section */}
-      <div className="max-w-7xl mx-auto px-4 py-24">
+      <div className="max-w-7xl mx-auto px-4 py-24 bg-secondary-900">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-24">
           <motion.div 
             variants={slideInLeft}
@@ -80,13 +80,13 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             viewport={{ once: true }}
             className="order-2 md:order-1 space-y-6"
           >
-            <span className="text-primary-600 font-bold uppercase tracking-wider text-sm">Our Mission</span>
-            <h2 className="text-3xl font-bold text-gray-900">Bridging the Gap</h2>
-            <p className="text-gray-600 leading-relaxed text-lg">
+            <span className="text-primary-400 font-bold uppercase tracking-wider text-sm">Our Mission</span>
+            <h2 className="text-3xl font-bold text-secondary-50">Bridging the Gap</h2>
+            <p className="text-secondary-400 leading-relaxed text-lg">
               EcoTrade was founded to bridge the gap between waste generators and recycling industries. 
               In many developing regions, valuable recyclable materials end up in landfills due to a fragmented supply chain.
             </p>
-            <p className="text-gray-600 leading-relaxed text-lg">
+            <p className="text-secondary-400 leading-relaxed text-lg">
               We provide a digital infrastructure that brings transparency, fair pricing, and efficiency to the recycling ecosystem.
             </p>
           </motion.div>
@@ -118,9 +118,9 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <span className="text-primary-600 font-bold uppercase tracking-wider text-sm">Our Vision</span>
-            <h2 className="text-3xl font-bold text-gray-900">A Zero-Waste Future</h2>
-            <p className="text-gray-600 leading-relaxed text-lg">
+            <span className="text-primary-400 font-bold uppercase tracking-wider text-sm">Our Vision</span>
+            <h2 className="text-3xl font-bold text-secondary-50">A Zero-Waste Future</h2>
+            <p className="text-secondary-400 leading-relaxed text-lg">
               We envision a world where waste is viewed as a resource. By creating a circular economy, we aim to eliminate waste 
               pollution while creating economic opportunities for millions of collectors and businesses globally.
             </p>
@@ -129,7 +129,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
       </div>
 
       {/* Detailed Platform Process - Enhanced */}
-      <div className="bg-gray-50 py-32">
+      <div className="bg-secondary-800 border-t border-secondary-700 py-32">
         <div className="max-w-7xl mx-auto px-4">
            <motion.div 
              initial="hidden"
@@ -138,8 +138,8 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
              variants={fadeInUp}
              className="text-center mb-20"
            >
-             <h2 className="text-4xl font-extrabold text-gray-900 mb-4">How The Platform Works</h2>
-             <p className="text-gray-600 text-lg max-w-2xl mx-auto">A seamless end-to-end experience designed for transparency and ease of use.</p>
+             <h2 className="text-4xl font-black text-secondary-50 mb-4">How The Platform Works</h2>
+             <p className="text-secondary-400 text-lg max-w-2xl mx-auto">A seamless end-to-end experience designed for transparency and ease of use.</p>
            </motion.div>
            
            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -155,15 +155,15 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="relative p-10 bg-white rounded-3xl shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full min-h-[350px]"
+                  className="relative p-10 bg-secondary-900 rounded-3xl shadow-lg border border-secondary-700 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full min-h-[350px] hover:border-primary-600"
                >
-                  <div className="w-16 h-16 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-600 font-bold text-xl mb-8">
+                  <div className="w-16 h-16 bg-primary-500/20 rounded-2xl flex items-center justify-center text-primary-400 font-bold text-xl mb-8">
                      {item.step}
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed flex-grow">{item.desc}</p>
+                  <h3 className="text-2xl font-bold text-secondary-50 mb-4">{item.title}</h3>
+                  <p className="text-secondary-400 leading-relaxed flex-grow">{item.desc}</p>
                   
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gray-50 to-white rounded-bl-full -z-10 opacity-50"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-full -z-10 opacity-50"></div>
                </motion.div>
              ))}
            </div>
@@ -171,9 +171,9 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
       </div>
 
       {/* Statistics / Impact */}
-      <div className="bg-primary-600 py-20 text-white">
+      <div className="bg-gradient-to-r from-primary-600 to-accent-600 py-20 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-primary-500">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
             {[
               { label: 'Active Businesses', val: '500+' },
               { label: 'Tons Recycled', val: '10k+' },
@@ -187,8 +187,8 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
                 transition={{ delay: idx * 0.1 }}
                 className="p-4"
               >
-                 <div className="text-5xl font-bold mb-2">{stat.val}</div>
-                 <div className="text-primary-200">{stat.label}</div>
+                 <div className="text-5xl font-black mb-2">{stat.val}</div>
+                 <div className="text-white/80">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -196,22 +196,22 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
       </div>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white text-center">
+      <section className="py-24 bg-secondary-900 text-center border-t border-secondary-700">
          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto px-4"
          >
-           <h2 className="text-3xl font-bold text-gray-900 mb-6">Join the Circular Economy</h2>
-           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+           <h2 className="text-3xl font-bold text-secondary-50 mb-6">Join the Circular Economy</h2>
+           <p className="text-xl text-secondary-400 mb-8 max-w-2xl mx-auto">
              Whether you're looking to buy sustainable materials or sell your scrap, EcoTrade is the platform for you.
            </p>
            <motion.button 
              whileHover={{ scale: 1.05 }}
              whileTap={{ scale: 0.95 }}
              onClick={() => onNavigate && onNavigate('register')}
-             className="bg-secondary-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-black transition-colors shadow-lg"
+             className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:from-primary-600 hover:to-primary-700 transition-colors shadow-lg"
            >
              Get Started Now
            </motion.button>

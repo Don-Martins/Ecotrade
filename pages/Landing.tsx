@@ -33,11 +33,11 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* High Converting Hero Section */}
-      <section className="relative bg-white overflow-hidden pt-16 pb-20 lg:pt-32 lg:pb-28">
+      {/* Hero Section */}
+      <section className="relative bg-secondary-900 overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-32">
         <div className="absolute top-0 left-1/2 w-full -translate-x-1/2 z-0 h-full overflow-hidden">
-           <div className="absolute top-0 right-0 w-[50rem] h-[50rem] bg-green-50 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/4"></div>
-           <div className="absolute bottom-0 left-0 w-[50rem] h-[50rem] bg-blue-50 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/4"></div>
+           <div className="absolute top-20 right-0 w-[40rem] h-[40rem] bg-primary-600 rounded-full blur-3xl opacity-20 -translate-y-1/2 translate-x-1/4"></div>
+           <div className="absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-accent-600 rounded-full blur-3xl opacity-15 translate-y-1/2 -translate-x-1/4"></div>
         </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -49,16 +49,16 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
               variants={staggerContainer}
               className="text-center lg:text-left"
             >
-              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 text-green-700 text-xs font-semibold mb-6">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+              <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-950 border border-primary-700 text-primary-300 text-xs font-semibold mb-6">
+                <span className="w-2 h-2 rounded-full bg-primary-400 animate-pulse"></span>
                 The #1 Circular Economy Marketplace
               </motion.div>
               
-              <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-extrabold text-gray-900 tracking-tight leading-[1.1] mb-6">
-                Turn Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400">Waste</span> Into <span className="text-gray-900">Wealth</span>.
+              <motion.h1 variants={fadeInUp} className="text-5xl lg:text-7xl font-black text-secondary-50 tracking-tight leading-[1.1] mb-6">
+                Turn Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">Waste</span> Into <span className="text-primary-300">Wealth</span>.
               </motion.h1>
               
-              <motion.p variants={fadeInUp} className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              <motion.p variants={fadeInUp} className="text-lg text-secondary-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                 EcoTrade connects businesses, recyclers, and aggregators in a secure marketplace. Trade plastics, metals, and electronics with transparent pricing and verified partners.
               </motion.p>
               
@@ -67,7 +67,7 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onNavigate('register')}
-                  className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary-500/20 transition-all"
+                  className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary-500/30 transition-all"
                 >
                   Start Selling Now
                 </motion.button>
@@ -75,21 +75,21 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => onNavigate('marketplace')}
-                  className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all"
+                  className="bg-secondary-800 border border-secondary-700 hover:bg-secondary-700 text-secondary-50 px-8 py-4 rounded-xl font-bold text-lg transition-all"
                 >
                   Browse Materials
                 </motion.button>
               </motion.div>
 
-              <motion.div variants={fadeInUp} className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-gray-400 grayscale opacity-70">
+              <motion.div variants={fadeInUp} className="mt-10 flex items-center justify-center lg:justify-start gap-6 text-secondary-400">
                  <div className="flex -space-x-3 mr-4">
                     {[1, 2, 3, 4].map(i => (
-                       <img key={i} className="w-10 h-10 rounded-full border-2 border-white" src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
+                       <img key={i} className="w-10 h-10 rounded-full border-2 border-secondary-700" src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" />
                     ))}
-                    <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-600">+2k</div>
+                    <div className="w-10 h-10 rounded-full border-2 border-secondary-700 bg-secondary-800 flex items-center justify-center text-xs font-bold text-secondary-400">+2k</div>
                  </div>
-                 <div className="text-sm font-medium text-gray-500">
-                    Trusted by <span className="text-gray-900 font-bold">2,000+</span> businesses
+                 <div className="text-sm font-medium text-secondary-400">
+                    Trusted by <span className="text-secondary-50 font-bold">2,000+</span> businesses
                  </div>
               </motion.div>
             </motion.div>
@@ -101,19 +101,19 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                transition={{ duration: 0.8 }}
                className="relative lg:h-[600px] w-full hidden lg:block"
             >
-               <div className="absolute inset-0 bg-gray-200 rounded-3xl overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500">
-                  <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Dashboard Preview" />
+               <div className="absolute inset-0 bg-secondary-800 rounded-3xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-all duration-500 border border-secondary-700">
+                  <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1000&auto=format&fit=crop" className="w-full h-full object-cover" alt="Recycling Materials" />
                   
                   {/* Floating Card 1 */}
                   <motion.div 
                     animate={{ y: [0, -10, 0] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-10 left-10 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 z-10"
+                    className="absolute top-10 left-10 bg-secondary-800 p-4 rounded-xl shadow-lg flex items-center gap-3 z-10 border border-secondary-700"
                   >
-                     <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600"><i className="fas fa-check"></i></div>
+                     <div className="w-10 h-10 bg-primary-500/20 rounded-full flex items-center justify-center text-primary-400"><i className="fas fa-check"></i></div>
                      <div>
-                        <p className="text-xs text-gray-500">New Sale</p>
-                        <p className="font-bold text-gray-900">+ ₦45,000</p>
+                        <p className="text-xs text-secondary-400">New Sale</p>
+                        <p className="font-bold text-secondary-50">+ ₦45,000</p>
                      </div>
                   </motion.div>
 
@@ -121,13 +121,13 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                   <motion.div 
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="absolute bottom-20 right-10 bg-white p-4 rounded-xl shadow-lg z-10 max-w-xs"
+                    className="absolute bottom-20 right-10 bg-secondary-800 p-4 rounded-xl shadow-lg z-10 max-w-xs border border-secondary-700"
                   >
                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded">PET Plastic</span>
-                        <span className="text-xs text-gray-400">Just now</span>
+                        <span className="text-xs font-bold bg-primary-500/20 text-primary-400 px-2 py-1 rounded">PET Plastic</span>
+                        <span className="text-xs text-secondary-500">Just now</span>
                      </div>
-                     <p className="font-bold text-gray-800 text-sm">500kg Purchase Request Sent</p>
+                     <p className="font-bold text-secondary-50 text-sm">500kg Purchase Request Sent</p>
                   </motion.div>
                </div>
             </motion.div>
@@ -136,7 +136,7 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-secondary-800 border-t border-secondary-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial="hidden"
@@ -145,8 +145,8 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <h2 className="text-4xl font-bold text-secondary-50 mb-4">How It Works</h2>
+            <p className="text-secondary-400 max-w-2xl mx-auto text-lg">
               Streamlined process for sustainable trading in 3 simple steps.
             </p>
           </motion.div>
@@ -179,13 +179,13 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                 key={idx}
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
-                className="group p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 text-center relative z-0"
+                className="group p-8 bg-secondary-900 rounded-2xl border border-secondary-700 shadow-lg hover:shadow-xl hover:border-primary-600 transition-all duration-300 text-center relative z-0"
               >
-                <div className="w-20 h-20 bg-primary-50 text-primary-600 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300">
+                <div className="w-20 h-20 bg-primary-500/10 text-primary-400 rounded-full flex items-center justify-center text-3xl mb-6 mx-auto group-hover:bg-primary-500/20 group-hover:text-primary-300 transition-colors duration-300">
                   <i className={`fas ${step.icon}`}></i>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-500 leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl font-bold text-secondary-50 mb-3">{step.title}</h3>
+                <p className="text-secondary-400 leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -193,7 +193,7 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
       </section>
 
       {/* Featured Listings */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-secondary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
              initial="hidden"
@@ -203,12 +203,12 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
              className="flex justify-between items-end mb-12"
           >
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Featured Listings</h2>
-              <p className="text-gray-600">Fresh materials just added to the marketplace</p>
+              <h2 className="text-4xl font-bold text-secondary-50 mb-2">Featured Listings</h2>
+              <p className="text-secondary-400">Fresh materials just added to the marketplace</p>
             </div>
             <button 
               onClick={() => onNavigate('marketplace')}
-              className="text-primary-600 font-semibold hover:text-primary-700 flex items-center transition-colors group"
+              className="text-primary-400 font-semibold hover:text-primary-300 flex items-center transition-colors group"
             >
               View All <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </button>
@@ -234,7 +234,7 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-secondary-800 border-t border-secondary-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             initial="hidden"
@@ -243,8 +243,8 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
             variants={fadeInUp}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose EcoTrade?</h2>
-            <p className="text-gray-600">The most trusted platform for industrial recycling.</p>
+            <h2 className="text-4xl font-bold text-secondary-50 mb-4">Why Choose EcoTrade?</h2>
+            <p className="text-secondary-400">The most trusted platform for industrial recycling.</p>
           </motion.div>
 
           <motion.div 
@@ -264,13 +264,13 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
                 key={i} 
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
-                className="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary-100 transition-all duration-300"
+                className="flex flex-col items-center text-center p-8 bg-secondary-900 rounded-2xl shadow-lg border border-secondary-700 hover:shadow-xl hover:border-primary-600 transition-all duration-300"
               >
-                 <div className="w-16 h-16 rounded-full bg-secondary-50 flex items-center justify-center text-secondary-600 text-2xl mb-6">
+                 <div className="w-16 h-16 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-400 text-2xl mb-6">
                     <i className={`fas ${feature.icon}`}></i>
                  </div>
-                 <h3 className="font-bold text-lg text-gray-900 mb-3">{feature.title}</h3>
-                 <p className="text-sm text-gray-500 leading-relaxed">{feature.desc}</p>
+                 <h3 className="font-bold text-lg text-secondary-50 mb-3">{feature.title}</h3>
+                 <p className="text-sm text-secondary-400 leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -278,16 +278,16 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary-700 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 relative overflow-hidden">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary-600 opacity-50 blur-3xl"
+          className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-white opacity-10 blur-3xl"
         ></motion.div>
         <motion.div 
           animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-          className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-primary-500 opacity-50 blur-3xl"
+          className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-white opacity-10 blur-3xl"
         ></motion.div>
         
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
@@ -297,8 +297,8 @@ const Landing: React.FC<LandingProps> = ({ onNavigate, onViewListing }) => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to maximize your recycling potential?</h2>
-            <p className="text-primary-100 text-xl mb-10 max-w-2xl mx-auto">Join thousands of businesses trading sustainably on EcoTrade today. Sign up is free and easy.</p>
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6">Ready to maximize your recycling potential?</h2>
+            <p className="text-white/90 text-xl mb-10 max-w-2xl mx-auto">Join thousands of businesses trading sustainably on EcoTrade today. Sign up is free and easy.</p>
             <motion.button 
                whileHover={{ scale: 1.05 }}
                whileTap={{ scale: 0.95 }}
